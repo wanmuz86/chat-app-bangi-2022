@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "641526000024",
+    "project_id": "chat-app-bangi",
+    "storage_bucket": "chat-app-bangi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:641526000024:android:a24a19cf049b81333d23ed",
+        "android_client_info": {
+          "package_name": "com.example.chat_app_bangi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "641526000024-5qn98o535q2q7a3e7dkgcp5d6gppsr3p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZHghJU4Agw9LUGd5kAR9StyqLgBiqDGA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "641526000024-5qn98o535q2q7a3e7dkgcp5d6gppsr3p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
