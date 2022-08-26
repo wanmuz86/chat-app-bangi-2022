@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
@@ -6,6 +7,7 @@ class RegisterPage extends StatelessWidget {
  var passwordEditingController = TextEditingController();
 
  FirebaseAuth _auth = FirebaseAuth.instance;
+
 
   @override
   Widget build(BuildContext context) {
@@ -26,6 +28,15 @@ class RegisterPage extends StatelessWidget {
               _auth.createUserWithEmailAndPassword(email: emailEditingController.text,
                   password: passwordEditingController.text)
                   .then((value) {
+                    if (value != null) {
+                      FirebaseFirestore.instance.collection('users').doc(
+                          value.user?.uid).set({
+                        "id":value.user?.uid,
+                        "email":value.user?.email,
+                        "createdAt":DateTime.now(),
+                        "chattingWith":null
+                      });
+                    }
                 final snackBar = SnackBar(
                   content: const Text('Succesfully registered, you may login now'),
 

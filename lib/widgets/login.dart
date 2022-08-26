@@ -31,7 +31,7 @@ class LoginPage extends StatelessWidget {
               _auth.signInWithEmailAndPassword(email: emailEditingController.text, password: passwordEditingController.text)
               .then((value) {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context)=>ListPage()));
+                    MaterialPageRoute(builder: (context)=>ListPage(email: value.user!.email!,userId: value.user!.uid,)));
               }).catchError((err){
                 print(err);
               });
